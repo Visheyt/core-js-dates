@@ -73,10 +73,10 @@ function getDayName(date) {
 function getNextFriday(date) {
   const month = date.getMonth();
   const year = date.getFullYear();
-  let day = date.getDate() + 1;
+  let day = date.getUTCDate() + 1;
   while (date) {
     const newDate = new Date(Date.UTC(year, month, day));
-    if (newDate.getDay() === 5) {
+    if (newDate.getUTCDay() === 5) {
       return newDate;
     }
     day += 1;
