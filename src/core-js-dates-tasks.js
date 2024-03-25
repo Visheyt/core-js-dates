@@ -224,7 +224,6 @@ function getWeekNumberByDate(date) {
     date.getMonth(),
     date.getDate()
   );
-  console.log(date.getTimezoneOffset());
   startDate.setHours(startDate.getHours() - date.getTimezoneOffset() / 60);
   sourceDate.setHours(sourceDate.getHours() - date.getTimezoneOffset() / 60);
 
