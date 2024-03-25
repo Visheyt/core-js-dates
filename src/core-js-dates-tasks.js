@@ -221,9 +221,7 @@ function getWeekNumberByDate(date) {
   const firstDayOfYear = new Date(date.getUTCFullYear(), 0);
   const dayMilliseconds = 86400000;
   return Math.ceil(
-    ((date - firstDayOfYear) / dayMilliseconds +
-      firstDayOfYear.getUTCDay() +
-      1) /
+    ((date - firstDayOfYear) / dayMilliseconds + firstDayOfYear.getDay() + 1) /
       7
   );
 }
