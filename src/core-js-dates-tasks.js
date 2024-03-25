@@ -47,16 +47,16 @@ function getTime(date) {
  * '2024-01-30T00:00:00.000Z' => 'Tuesday'
  */
 function getDayName(date) {
-  const WEEK_NAMES = {
-    1: 'Monday',
-    2: 'Tuesday',
-    3: 'Wednesday',
-    4: 'Thursday',
-    5: 'Friday',
-    6: 'Saturday',
-    0: 'Sunday',
-  };
-  return WEEK_NAMES[new Date(date).getDay()];
+  const WEEK_NAMES = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+  return WEEK_NAMES[new Date(date).getUTCDay()];
 }
 
 /**
