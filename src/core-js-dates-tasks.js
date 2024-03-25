@@ -71,7 +71,17 @@ function getDayName(date) {
  * Date('2024-02-16T00:00:00Z') => Date('2024-02-23T00:00:00Z')
  */
 function getNextFriday(date) {
-  return date.getDate();
+  const month = date.getMonth();
+  const year = date.getFullYear();
+  let day = date.getDate() + 1;
+  while (date) {
+    const newDate = new Date(Date.UTC(year, month, day));
+    if (newDate.getDay() === 5) {
+      return newDate;
+    }
+    day += 1;
+  }
+  return false;
 }
 
 /**
